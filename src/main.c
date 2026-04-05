@@ -58,7 +58,7 @@ void player_input(){
 
 
 
-void set_platforms(){
+void set_platforms(){   //initializes platform coords
     platforms[count].rect = (Rectangle){0,screenHeight-10,800,50};
     count++;
     platforms[count].rect = (Rectangle){100,500,100,20};
@@ -83,7 +83,7 @@ void draw_plat(){
 }
 
 
-void set_coins(){
+void set_coins(){ //initializes the coins
     coins[coin_count].pos = (Vector2){120,470};
     coins[coin_count].radius = 8;
     coins[coin_count].collected = false;
@@ -136,7 +136,7 @@ void collision(){
     player.on_ground = false;
     
     
-    player.pos.x += player.speed.x;
+    player.pos.x += player.speed.x;     // collision for x and y are seperate to resolve issue with diagonal collision
     Rectangle player_rect = {player.pos.x,player.pos.y,player.size.x,player.size.y};
     
     for (int i = 0; i < count; i++){
@@ -169,7 +169,7 @@ void collision(){
         }
     }
     
-    for (int i = 0; i < coin_count; i++){
+    for (int i = 0; i < coin_count; i++){   
         if (!coins[i].collected){
             if (CheckCollisionCircleRec(coins[i].pos, coins[i].radius, (Rectangle){player.pos.x,player.pos.y,player.size.x,player.size.y})){
                 coins[i].collected = true;
