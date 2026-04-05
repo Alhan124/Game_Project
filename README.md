@@ -1,4 +1,4 @@
-# Platformer Game By ALhan Suneer
+# Platformer Game By Alhan Suneer
 
 
 ##Compiled Using GCC with Raylib
