@@ -203,7 +203,6 @@ void menu(){
     DrawText("Controls:",screenWidth/2-50,230,20,WHITE);
     DrawText("A/D - Move",screenWidth/2-150,280,20,WHITE);
     DrawText("Space - Jump",screenWidth/2-150,330,20,WHITE);
-    DrawText("Shift - Dash",screenWidth/2-150,380,20,WHITE);
     DrawText("Press Enter to Begin...",screenWidth/2-200,450,30,WHITE);
     EndDrawing();
     if (IsKeyPressed(KEY_ENTER)){
